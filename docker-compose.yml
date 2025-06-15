@@ -1,9 +1,12 @@
 services:
   sharenote:
+    container_name: sharenote
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "8086:8086"
+    expose:
+      - 8086
+    # ports:
+    #   - "8086:8086"
     volumes:
       - "./static:/sharenote-py/static"
